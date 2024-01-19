@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import Table from './Table'
+import Form from './Form'
+import { useEffect,useState } from 'react'
+import {getdata,deleteData}from "./Api"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () =>{
+  const[data,setdata]=useState([])
+
+  useEffect(()=>{
+ getproduct()
+
+  },[])
+
+  let getproduct = async ( ) => {
+    let res= await getdata()
+  //  let data= res.props.children.data
+  let data=res.data  
+  setdata(data)
+    console.log(data)
+
+  }
+  let deleteproduct = async (id) =>{
+    await deleteData(id);
+    getproduct()
+  }
+
+ 
+
+
+
+
+  return(
+    <>
+    <div className="container ">
+      <h1>these is crud operation</h1>
+      <button className='btn btn-primary'>Add product</button>
+       <Table data1={data} delete1={deleteproduct}/>
+      
     </div>
-  );
+    
+    </>
+  )
 }
-
-export default App;
+export default App

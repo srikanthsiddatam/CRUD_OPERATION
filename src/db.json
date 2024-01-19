@@ -1,0 +1,63 @@
+{
+    "product":[
+        {
+            "name":"redme note 11",
+            "price":"29000",
+            "catagory":"mobiles",
+            "id":1
+        },
+        {
+            "name":"vivo11",
+            "price":"20000",
+            "catagory":"mobiles",
+            "id":2
+        },
+        {
+            "name":"Apples",
+            "price":"210000",
+            "catagory":"mobiles",
+            "id":3
+        }
+        
+    ],
+    "order":[
+        {
+        "id":"1",
+        "order":"12-3-2024",
+        "total":25000
+    },
+    {
+        "id":"1",
+        "order":"132-31-2024",
+        "total":25000
+    },
+    {
+        "id":"1",
+        "order":"122-33-2024",
+        "total":25000
+    }
+
+],
+"product1":[
+    {
+        "name":"redme note 11",
+        "price":"29000",
+        "catagory":"mobiles",
+        "id":1
+    },
+    {
+        "name":"vivo11",
+        "price":"20000",
+        "catagory":"mobiles",
+        "id":2
+    },
+    {
+        "name":"Apples",
+        "price":"210000",
+        "catagory":"mobiles",
+        "id":3
+    }
+    
+]
+
+}
